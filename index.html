@@ -1,151 +1,87 @@
 <!DOCTYPE html>
 <html lang="es">
 
+
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <title>Resume - Start Bootstrap Theme</title>
-    <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico"><!-- Font Awesome icons (free version)-->
-    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
-    <!-- Google fonts-->
-    <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css">
-    <!-- Core theme CSS (includes Bootstrap)-->
-    <link href="css/styles.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>API CLIMA</title>
 </head>
 
-<body id="page-top"><!-- Navigation-->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav"><a
-            class="navbar-brand js-scroll-trigger" href="#page-top"><span class="d-block d-lg-none">Santiago
-                Saucedo</span><span class="d-none d-lg-block"><img
-                    class="img-fluid img-profile rounded-circle mx-auto mb-2" src="assets/img/profile.jpg"
-                    alt="..."></span></a><button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-            data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
-            aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-            <ul class="navbar-nav">
-                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">Sobre mi</a></li>
-                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#experience">Experiencia</a></li>
-                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#education">Educacion</a></li>
-                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#skills">Skills</a></li>
-                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#interests">Intereses</a></li>
-            </ul>
+<body>
+
+
+    <div class="image-slider">
+        <div class="image image1"></div>
+        <div class="image image2"></div>
+        <div class="image image3"></div>
+    </div>
+
+    <!-- Formulario -->
+
+    <form>
+        <div class="containter-all">
+            <h1>Ingrese direccion o coordenadas</h1>
+            <!-- Ciudad -->
+            <div class="container mb-4">
+                <label for="ciudad" class="block text-sm font-medium text-gray-700">Ciudad</label>
+                <input type="text" id="ciudad"
+                    class="direccion mt-1 p-2 w-full border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+            </div>
+            <!-- Coordenadas -->
+            <div class="container mb-4">
+                <div class="flex gap-2 mt-1">
+                    <div class="w-1/2">
+                        <label for="lat" class="text-sm font-medium text-gray-700">Latitud</label>
+                        <input type="text" id="lat"
+                            class="mt-1 p-2 w-full border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                    </div>
+                    <div class="w-1/2">
+                        <label for="lon" class="text-sm font-medium text-gray-700">Longitud</label>
+                        <input type="text" id="lon"
+                            class="mt-1 p-2 w-full border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                    </div>
+                </div>
+            </div>
+            <div class="buttons">
+                
+
+                <button type="button" id="btn" class="btn p-2 bg-blue-500 text-white rounded-md w-full sm:w-auto">
+                    Buscar
+                </button>
+                <button type="button" id="btn-borrar" class="btn p-2 bg-red-500 text-white rounded-md w-full sm:w-auto">
+                    Borrar
+                </button>
+                <button type="button" id="btn-volumen">
+                    <img src="icons/sonido.gif" id="btn-sonido" >
+                </button>
+            </div>
         </div>
-    </nav><!-- Page Content-->
-    <div class="container-fluid p-0"><!-- About-->
-        <section class="resume-section" id="about">
-            <div class="resume-section-content">
-                <h1 class="mb-0">Santiago<span class="text-primary">Saucedo</span></h1>
-                <div class="subheading mb-5">Carlos Antonio Lopez 2396 · Villa Pueyrredon, CABA ·(+54 9)115-992-1253 ·
-                    <br><a href="mailto:santiagonsaucedo@gmail.com" id="email">santiagonsaucedo@gmail.com</a> <button
-                        id="copy-btn" class="btn btn-link" onclick="copyEmail()">
-                        <i class="fas fa-copy"></i>
-                    </button>
-                </div>
-                <p class="lead mb-5">Como recién egresado en desarrollo de software, adquiri experiencia práctica
-                    trabajando de manera colaborativa
-                    en proyectos con compañeros del curso. Tengo habilidades en el uso de metodologías ágiles y marcos de trabajo
-                    modernos para desarrollar soluciones de calidad.
-                    A través de los proyectos académicos y trabajo en equipo, fortaleci mis conocimientos en principios
-                    de programación, resolución de problemas y aprendizaje continuo para adaptarme a las nuevas
-                    tecnologías."
+    </form>
 
-                </p>
-                <div class="social-icons"><a class="social-icon" href="www.linkedin.com/in/santiago--saucedo"><i
-                            class="fab fa-linkedin-in"></i></a><a class="social-icon"
-                        href="https://github.com/santisaucedo"><i class="fab fa-github"></i></a></div>
+
+    <!-- Tarjeta de Clima -->
+    <div class="card">
+
+        <div class="container contenedor-tarjeta">
+            <div class="cloud front">
+                <span class="left-front"></span>
+                <span class="right-front"></span>
             </div>
-        </section>
-        <hr class="m-0"><!-- Experience-->
-        <section class="resume-section" id="experience">
-            <div class="resume-section-content">
-                <h2 class="mb-5">Experiencia</h2>
-
-                <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                    <div class="flex-grow-1">
-                        <h3 class="mb-0">Desarrollo Web</h3>
-                        <div class="subheading mb-3">CFP</div>
-                        <p><strong>Página estilo Netflix:</strong> Desarrollo de una página web estilo Netflix
-                            utilizando PHP y Laravel, implementando funcionalidades avanzadas de gestión de contenido,
-                            autenticación de usuarios y personalización de interfaz.</p>
-                        <p><strong>Gestión de Clínicas:</strong> Creación de un sistema CRUD para la gestión de
-                            clínicas, optimizando el manejo de pacientes, citas y registros médicos, mejorando la
-                            eficiencia en la administración y el seguimiento de datos.</p>
-                        <p><strong>Diseño de Interfaces:</strong> Colaboración en el diseño de interfaces web para
-                            mejorar la experiencia del usuario, optimizando la navegación y funcionalidades para
-                            dispositivos móviles.</p>
-                        <p><strong>API Clima y Normalización de Direcciones:</strong> Desarrollo de una API de clima y
-                            un sistema para normalizar direcciones en diversas plataformas, mejorando la experiencia del
-                            usuario final.</p>
-                    </div>
-                    <div class="flex-shrink-0"><span class="text-primary">Agosto 2023 - Diciembre 2024</span></div>
-                </div>
-
-        </section>
-        <hr class="m-0"><!-- Education-->
-        <section class="resume-section" id="education">
-            <div class="resume-section-content">
-                <h2 class="mb-5">Educacion</h2>
-                <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                    <div class="flex-grow-1">
-                        <h3 class="mb-0">CFP SMATA </h3>
-                        <div class="subheading mb-3">Desarrollo de software</div>
-                        <div>Aplicaciones WEB - Interfaz Grafica - Base de datos</div>
-                        <p></p>
-                    </div>
-                    <div class="flex-shrink-0"><span class="text-primary">Agosto 2023 - Diciembre 2024</span></div>
-                </div>
-                <div class="d-flex flex-column flex-md-row justify-content-between">
-                    <div class="flex-grow-1">
-                        <h3 class="mb-0">Alura LATAM</h3>
-                        <div class="subheading mb-3">Java Script - HTML - CSS</div>
-                        <p></p>
-                    </div>
-                    <div class="flex-shrink-0"><span class="text-primary">Enero 2022 - Julio 2022</span></div>
-                </div>
+            <span class="sun sunshine"></span>
+            <span class="sun"></span>
+            <div class="cloud back">
+                <span class="left-back"></span>
+                <span class="right-back"></span>
             </div>
-        </section>
-        <hr class="m-0"><!-- Skills-->
-        <section class="resume-section" id="skills">
-            <div class="resume-section-content">
-                <h2 class="mb-5">Skills</h2>
-                <div class="subheading mb-3">Lenguajes de programacion y herramientas</div>
-                <ul class="list-inline dev-icons">
-                    <li class="list-inline-item"><i class="fab fa-html5"></i></li>
-                    <li class="list-inline-item"><i class="fa-brands fa-css3"></i></li>
-                    <li class="list-inline-item"><i class="fab fa-js-square"></i></li>
-                    <li class="list-inline-item"><i class="fab fa-wordpress"></i></li>
-                    <li class="list-inline-item"><i class="fa-brands fa-git"></i></li>
-                    <li class="list-inline-item"><i class="fa-brands fa-bootstrap"></i></li>
+        </div>
 
-                </ul>
-                <div class="subheading mb-3">Flujo de Trabajo</div>
-                <ul class="fa-ul mb-0">
-                    <li><span class="fa-li"><i class="fas fa-check"></i></span>Diseño Responsive, Mobile-First</li>
-                    <li><span class="fa-li"><i class="fas fa-check"></i></span>Pruebas y Depuración en Diferentes
-                        Navegadores</li>
-                    <li><span class="fa-li"><i class="fas fa-check"></i></span>Equipos Multifuncionales</li>
-                    <li><span class="fa-li"><i class="fas fa-check"></i></span>Investigación y Documentación</li>
-                </ul>
-            </div>
-        </section>
-        <hr class="m-0"><!-- Intereses-->
-        <section class="resume-section" id="interests">
-            <div class="resume-section-content">
-                <h2 class="mb-5">Intereses</h2>
-                <p>Disfruto mucho del entrenamiento en general desde jugar al fútbol, trotar o acrobacia, actividades
-                    que me mantengan activo y me generen un desafío. También me apasiona leer, meditar y compartir
-                    tiempo con pareja, amigos y familia.
-                    Me encanta asistir a fiestas de música electrónica, conectar con la musica y la energía de la gente.
-                </p>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="codigo.js"></script>
 
-            </div>
-    </div><!-- Bootstrap core JS-->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Core theme JS-->
-    <script src="js/scripts.js"></script>
+
 </body>
 
 </html>

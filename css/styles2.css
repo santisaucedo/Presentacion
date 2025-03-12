@@ -16,8 +16,6 @@ body {
   animation: backgroundChange 5s infinite alternate;
 }
 
-
-
 @keyframes backgroundChange {
   from { background-color: #000000; } 
   to { background-color: #000000c0; } 
@@ -33,6 +31,7 @@ body {
   cursor: pointer;
   box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3), 0 0 10px rgba(255, 255, 255, 0.5); 
   transition: all 0.2s ease-in-out;
+  z-index: 10; 
 }
 
 .btn-3d:hover {
@@ -80,60 +79,39 @@ body {
   }
 }
 
-
-section {
-  height: 100vh; 
-  display: flex;
-  justify-content: center;
-  opacity: 0;
-  transition: opacity 1s ease-in-out, z-index 0s; 
-  position: relative; 
-  z-index: 1; 
-  margin-bottom: 50px; 
-  padding: 20px; 
+.foto-container {
+  display: inline-block;
+  position: relative;
+  padding: 10px;
+  background: rgba(0, 255, 255, 0.2);
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+  animation: neonEffect 8s infinite alternate;
 }
 
-section.active {
-  opacity: 1;
-  z-index: 10; 
-  visibility: visible; 
-}
-
-section:not(.active) {
-  visibility: hidden; 
-}
-
-.energy-line {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  z-index: 1;
-  background: transparent;
-  border: 2px solid rgba(255, 255, 255, 0.5); 
-  box-shadow: 0 0 10px 0 rgba(255, 255, 255, 0.5), 0 0 30px 5px rgba(255, 255, 255, 0.3), 0 0 50px 10px rgba(255, 255, 255, 0.2); 
-  animation: moveEnergy 150s infinite linear;
-}
-
-@keyframes moveEnergy {
+@keyframes neonEffect {
   0% {
-    transform: rotate(0deg);
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.6), 0 0 30px rgba(255, 255, 255, 0.4);
+  }
+  50% {
+    background: rgba(255, 255, 255, 0.4);
+    box-shadow: 0 0 50px rgb(255, 255, 255), 0 0 70px rgba(255, 255, 255, 0.8);
   }
   100% {
-    transform: rotate(360deg);
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.6), 0 0 40px rgba(255, 255, 255, 0.4);
   }
 }
 
-.container-fluid {
-  position: fixed; 
-  top: 0; 
-  left: 0; 
-  width: 100%; 
-  z-index: 9999; 
-  background-color: #212529; 
-  padding: 10px 0; 
+.foto {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.8), 0 0 30px rgba(0, 0, 0, 0.6), 0 0 40px rgba(0, 0, 0, 0.4);
+  transition: box-shadow 2s ease-in-out;
+  transform: translateY(2px); 
 }
 
 
@@ -229,133 +207,29 @@ p {
   margin-bottom: 20px; 
 }
 
-.subheading {
-  font-size: 1.5rem; 
-  text-align: left; 
-  margin-bottom: 10px; 
+.energy-line {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.5); 
+  box-shadow: 0 0 10px 0 rgba(255, 255, 255, 0.5), 0 0 30px 5px rgba(255, 255, 255, 0.3), 0 0 50px 10px rgba(255, 255, 255, 0.2); 
+  animation: moveEnergy 150s infinite linear;
 }
 
-#skills .subheading {
-  font-size: 1.8rem;
-}
-
-#skills ul {
-  font-size: 1.2rem;
-}
-
-#skills .dev-icons i {
-  font-size: 2rem;
-}
-
-#skills .fa-ul li {
-  font-size: 1.2rem;
-}
-
-@media (max-width: 768px) {
-  section {
-    height: 50vh; 
-    padding: 10px; 
-  }
-
-  section h6 {
-    font-size: 1.5rem; 
-    letter-spacing: 1px; 
-  }
-
-  p {
-    font-size: 1rem; 
-    line-height: 1.5; 
-  }
-
-  .subheading {
-    font-size: 1.2rem; 
-  }
-
-  .navbar-nav .nav-link {
-    font-size: 14px; 
-    transform: none; 
-  }
-
-  .energy-line {
-    border: 1px solid rgba(255, 255, 255, 0.3); 
-    box-shadow: 0 0 5px 0 rgba(255, 255, 255, 0.3), 
-                0 0 15px 3px rgba(255, 255, 255, 0.2), 
-                0 0 25px 5px rgba(255, 255, 255, 0.1); 
-  }
-
-  .aba, .arri, .izq, .der {
-    width: 2px; 
-    height: 30px; 
-  }
-}
-
-@media (max-width: 480px) {
-  section {
-    height: 40vh; 
-    padding: 5px; 
-  }
-
-  section h6 {
-    font-size: 1.2rem; 
-  }
-
-  p {
-    font-size: 0.9rem; 
-    line-height: 1.4; 
-  }
-
-  .subheading {
-    font-size: 1rem; 
-  }
-
-  .navbar-nav .nav-link {
-    font-size: 12px; 
-  }
-
-  .energy-line {
-    border: 1px solid rgba(255, 255, 255, 0.2); 
-    box-shadow: none; 
-  }
-
-  .aba, .arri, .izq, .der {
-    width: 1px; 
-    height: 20px; 
-  }
-}
-
-.foto-container {
-  display: inline-block;
-  position: relative;
-  padding: 10px;
-  background: rgba(0, 255, 255, 0.2);
-  border-radius: 50%;
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
-  animation: neonEffect 8s infinite alternate;
-}
-
-@keyframes neonEffect {
+@keyframes moveEnergy {
   0% {
-    background: rgba(255, 255, 255, 0.2);
-    box-shadow: 0 0 20px rgba(255, 255, 255, 0.6), 0 0 30px rgba(255, 255, 255, 0.4);
-  }
-  50% {
-    background: rgba(255, 255, 255, 0.4);
-    box-shadow: 0 0 50px rgb(255, 255, 255), 0 0 70px rgba(255, 255, 255, 0.8);
+    transform: rotate(0deg);
   }
   100% {
-    background: rgba(255, 255, 255, 0.2);
-    box-shadow: 0 0 20px rgba(255, 255, 255, 0.6), 0 0 40px rgba(255, 255, 255, 0.4);
+    transform: rotate(360deg);
   }
 }
 
-.foto {
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  object-fit: cover;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.8), 0 0 30px rgba(0, 0, 0, 0.6), 0 0 40px rgba(0, 0, 0, 0.4);
-  transition: box-shadow 2s ease-in-out;
-}
 
 
 @media (max-width: 768px) {
@@ -426,83 +300,26 @@ p {
   }
 }
 
-@media (max-width: 600px) {
-  body {
-    padding: 5px;
-    font-size: 14px;
-  }
 
-  h2, h3, h4 {
-    font-size: 1.5rem;
-    margin-top: 10%;
-  }
-
-  p {
-    font-size: 1rem;
-    line-height: 1.5;
-    text-align: left;
-  }
-
-  .btn-3d {
-    padding: 8px 16px;
-    font-size: 14px;
-  }
-
-  section {
-    height: auto;
-    padding: 10px;
-    margin-bottom: 30px;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .foto {
-    width: 150px;
-    height: 150px;
-  }
-
-  .navbar-nav .nav-link {
-    font-size: 14px;
-  }
-
-  .arrow {
-    gap: 2px;
-  }
-
-  .triangle {
-    border-width: 10px 15px 10px 0;
-  }
+section {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden; 
+  transition: opacity 1s ease-in-out, visibility 0s 1s, z-index 0s;
+  position: relative; 
+  z-index: 1;
+  margin-bottom: 50px;
+  padding: 20px;
 }
 
-@media (max-width: 400px) {
-  h2, h3, h4 {
-    font-size: 1.3rem;
-  }
-
-  p {
-    font-size: 0.9rem;
-    line-height: 1.4;
-  }
-
-  .btn-3d {
-    padding: 6px 12px;
-    font-size: 12px;
-  }
-
-  .foto {
-    width: 120px;
-    height: 120px;
-  }
-
-  .navbar-nav .nav-link {
-    font-size: 12px;
-  }
+section.active {
+  opacity: 1;
+  visibility: visible; /* Se asegura que la sección se muestre cuando esté activa */
+  z-index: 10;
 }
 
-.clearfix::after {
-  content: "";
-  display: table;
-  clear: both;
+section:not(.active) {
+  visibility: hidden; /* Se asegura de que las secciones no activas no ocupen espacio */
 }
-  

@@ -92,43 +92,45 @@
 }
 
 
+.button-container {
+  margin-bottom: 20px; 
+}
+
+
+.arrow-container {
+  width: 100%; 
+  text-align: center; 
+  margin-top: 10px; 
+  margin-right: 50%;
+}
 
 
 .arrow {
-  display: flex;
-  align-items: center;
-  gap: 5px; /* Espacio entre los triángulos */
-  animation: moveArrow 0.5s infinite alternate ease-in-out; /* Movimiento más rápido */
+  display: inline-block;  
 }
 
 .triangle {
   width: 0;
   height: 0;
-  display: flex;
   border-style: solid;
-  border-width: 0 15px 20px 15px; /* Triángulos apuntando hacia arriba */
-  border-color: transparent transparent #1e88e5 transparent; /* Color de la base */
+  border-width: 0 15px 20px 15px;
+  border-color: transparent transparent #1e88e5 transparent;
+  margin: 0 5px; 
 }
 
-.triangle:nth-child(2) {
-  border-color: transparent transparent #42a5f5 transparent;
-  opacity: 0.8;
-}
-
-.triangle:nth-child(3) {
-  border-color: transparent transparent #90caf9 transparent;
-  opacity: 0.6;
-}
 
 @keyframes moveArrow {
   0% {
-    transform: translateY(5px); /* Movimiento hacia abajo */
+      transform: translateY(5px);
   }
   100% {
-    transform: translateY(-5px); /* Movimiento hacia arriba */
+      transform: translateY(-5px);
   }
 }
 
+.arrow {
+  animation: moveArrow 0.5s infinite alternate ease-in-out;
+}
 
 
 

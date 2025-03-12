@@ -132,7 +132,7 @@
 /* Media Query para pantallas más grandes */
 @media (min-width: 768px) {
   .arrow-container {
-    margin-right: 0%; 
+    margin-left: 10%; 
   }
 }
 

@@ -100,7 +100,7 @@
   width: 100%; 
   text-align: center; 
   margin-top: 10px; 
-  margin-right: 70%;
+  margin-right: 70%;  
 }
 
 .arrow {
@@ -132,9 +132,11 @@
 /* Media Query para pantallas más grandes */
 @media (min-width: 768px) {
   .arrow-container {
-    margin-left: 0%; 
+    margin-right: 0%; 
+    margin-left: 50%;  
   }
 }
+
 
 
 

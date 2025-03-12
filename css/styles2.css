@@ -348,16 +348,16 @@ section {
   transition: opacity 1s ease-in-out, visibility 0s 1s, z-index 0s;
   position: relative; 
   z-index: 1;
-  margin-bottom: 50px;
+  margin-bottom: 35px;
   padding: 20px;
 }
 
 section.active {
   opacity: 1;
-  visibility: visible; /* Se asegura que la sección se muestre cuando esté activa */
+  visibility: visible;
   z-index: 10;
 }
 
 section:not(.active) {
-  visibility: hidden; /* Se asegura de que las secciones no activas no ocupen espacio */
+  visibility: hidden;
 }

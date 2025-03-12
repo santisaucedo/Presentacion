@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curriculum</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link id="theme-style" rel="stylesheet" href="css/styles2.css">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="izq"></div>
+    <div class="der"></div>
+    <div class="aba"></div>
+    <div class="arri"></div>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#curriculum">Santiago Saucedo</a>
+            <div class="d-flex align-items-center"> <!-- Contenedor flex para el botón y las flechas -->
+                <button id="toggle-style" class="btn-3d">Cambiar Estilo</button>
+                <div class="arrow">
+                    <div class="triangle"></div>
+                    <div class="triangle"></div>
+                    <div class="triangle"></div>
+                </div>
+            </div>
+            <div class="d-flex justify-content-end align-items-center"> <!-- Contenedor flex para los datos -->
+                <span class="navbar-text me-3">Carlos Antonio Lopez 2396 · Villa Pueyrredon, CABA · (+54 9)115-992-1253
+                    ·</span>
+                <a href="mailto:santiagonsaucedo@gmail.com" id="email"
+                    class="navbar-text">santiagonsaucedo@gmail.com</a>
+                <button id="copy-btn" class="btn btn-link" onclick="copyEmail()">
+                    <i class="fas fa-copy"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="#acerca-de">Sobre Mí</a></li>
+            <li class="nav-item"><a class="nav-link" href="#experiencia">Experiencia</a></li>
+            <li class="nav-item"><a class="nav-link" href="#educacion">Educación</a></li>
+            <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+            <li class="nav-item"><a class="nav-link" href="#intereses">Intereses</a></li>
+        </ul>
+    </div>
+    </div>
+    </nav>
+
+    <section id="acerca-de" class="section py-5">
+        <div class="container text-center">
+            <div class="foto-container">
+                <img src="assets/img/profile.jpg" alt="CV" class="foto">
+            </div>
+
+
+            <h4>Acerca de Mí</h4>
+            <p>Como recién egresado en desarrollo de software, adquiri experiencia práctica
+                trabajando de manera colaborativa
+                en proyectos con compañeros del curso. Tengo habilidades en el uso de metodologías ágiles y marcos
+                de trabajo
+                modernos para desarrollar soluciones de calidad.
+                A través de los proyectos académicos y trabajo en equipo, fortaleci mis conocimientos en principios
+                de programación, resolución de problemas y aprendizaje continuo para adaptarme a las nuevas
+                tecnologías.</p>
+
+            <!-- Flecha para descargar CV -->
+            <a href="doc/CV.pdf" class="btn btn-primary btn-lg mt-4" download>
+                <i class="fas fa-arrow-down"></i> Descargar CV
+            </a>
+        </div>
+    </section>
+
+    <!-- Curriculum Sections -->
+    <section id="experiencia" class="section py-5">
+        <div class="container text-center">
+            <div class="flex-grow-1">
+                <h4>Desarrollo de software</h4>
+                <div class="subheading mb-3">CFP</div>
+                <p><strong>Página estilo Netflix:</strong> Desarrollo de una página web estilo Netflix
+                    utilizando PHP y Laravel, implementando funcionalidades avanzadas de gestión de contenido,
+                    autenticación de usuarios y personalización de interfaz.</p>
+                <p><strong>Sistema de Gestion Reparaciones:</strong> Creación de un sistema CRUD para la gestión
+                    de
+                    reparaciones, optimizando el manejo de clientes, equipos y ordenes de trabajo.</p>
+                <p><strong>Diseño de Interfaces:</strong> Colaboración en el diseño de interfaces web para
+                    mejorar la experiencia del usuario, optimizando la navegación y funcionalidades para
+                    dispositivos móviles.</p>
+                <p><strong>API Clima y Normalización de Direcciones:</strong> Desarrollo de una API de clima y
+                    un sistema para normalizar direcciones en diversas plataformas, mejorando la experiencia del
+                    usuario final.
+                    <br>
+                    <strong>Ir a API CLIMA</strong>
+                    <a href="https://santisaucedo.github.io/apiclima/" target="_blank" Atitle="API Clima">
+                        <i class="fas fa-link"></i>
+                    </a>
+                    <br>
+                    <strong>Ir a API GPS</strong>
+                    <a href="https://santisaucedo.github.io/apigps/" target="_blank" title="API GPS">
+                        <i class="fas fa-link"></i>
+                    </a>
+                </p>
+            </div>
+            <div class="flex-shrink-0"><span class="text-primary">Agosto 2023 - Diciembre 2024</span></div>
+        </div>
+    </section>
+
+    <section id="educacion" class="section py-5">
+        <div class="container text-center">
+            <h2 class="text-center">Educación</h2>
+            <h3 class="subheading mb-2">CFP SMATA - Desarrollador Full Stack</h3>
+            <div class="subheading mb-3">Aplicaciones WEB - Interfaz Grafica - Base de datos</div>
+            <p>
+                <span style="font-weight: bold;">Backend:</span> Java, PHP<br>
+                <span style="font-weight: bold;">Frontend:</span> JavaScript, HTML, CSS, Bootstrap.<br>
+                <span style="font-weight: bold;">Base de datos:</span> MySQL, MariaDB.<br>
+                <span style="font-weight: bold;">Herramientas:</span> Git, Laravel
+            </p>
+            <br><br>
+
+            <div class="d-flex flex-column flex-md-row justify-content-between">
+                <div class="flex-grow-1">
+                    <h3 class="subheading mb-2">Alura LATAM - Desarrollo Web</h3>
+                    <div class="subheading mb-3">Java Script - HTML - CSS</div>
+                    <p> <span style="font-weight: bold;">Frontend:</span> JavaScript, HTML, CSS, Bootstrap.<br>
+                        <span style="font-weight: bold;">Herramientas:</span> Git
+                    </p>
+
+                </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="section py-5">
+        <div class="container ">
+            <h2 class="text-center">Skills</h2>
+            <div class="subheading mb-3">Lenguajes de programación y herramientas</div>
+            <ul class="list-inline dev-icons">
+                <li class="list-inline-item"><i class="fab fa-html5"></i></li>
+                <li class="list-inline-item"><i class="fa-brands fa-css3"></i></li>
+                <li class="list-inline-item"><i class="fab fa-js-square"></i></li>
+                <li class="list-inline-item"><i class="fab fa-wordpress"></i></li>
+                <li class="list-inline-item"><i class="fa-brands fa-git"></i></li>
+                <li class="list-inline-item"><i class="fa-brands fa-bootstrap"></i></li>
+            </ul>
+            <div class="subheading mb-3">Flujo de Trabajo</div>
+            <ul class="fa-ul mb-0">
+                <li><span class="fa-li"><i class="fas fa-check"></i></span>Diseño Responsive, Mobile-First</li>
+                <li><span class="fa-li"><i class="fas fa-check"></i></span>Pruebas y Depuración en Diferentes
+                    Navegadores</li>
+                <li><span class="fa-li"><i class="fas fa-check"></i></span>Equipos Multifuncionales</li>
+                <li><span class="fa-li"><i class="fas fa-check"></i></span>Investigación y Documentación</li>
+            </ul>
+        </div>
+        </div>
+    </section>
+
+
+    <!-- Intereses -->
+    <section id="intereses" class="section py-5">
+        <div class="container text-center">
+            <h2 class="text-center">Intereses</h2>
+            <p>Disfruto mucho del entrenamiento en general desde jugar al fútbol, trotar o acrobacia, actividades
+                que me mantengan activo y me generen un desafío. También me apasiona leer, meditar y compartir
+                tiempo con pareja, amigos y familia.
+                Me encanta asistir a fiestas de música electrónica, conectar con la musica y la energía de la gente.</p>
+        </div>
+        </div>
+    </section>
+
+    <div class="energy-line"></div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/changecolor.js"></script>
+</body>
+
+</html>

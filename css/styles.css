@@ -91,11 +91,10 @@
   }
 }
 
-
+/* Estilos generales */
 .button-container {
   margin-bottom: 20px; 
 }
-
 
 .arrow-container {
   width: 100%; 
@@ -103,7 +102,6 @@
   margin-top: 10px; 
   margin-right: 50%;
 }
-
 
 .arrow {
   display: inline-block;  
@@ -118,7 +116,6 @@
   margin: 0 5px; 
 }
 
-
 @keyframes moveArrow {
   0% {
       transform: translateY(5px);
@@ -131,6 +128,14 @@
 .arrow {
   animation: moveArrow 0.5s infinite alternate ease-in-out;
 }
+
+/* Media Query para pantallas más grandes */
+@media (min-width: 768px) {
+  .arrow-container {
+    margin-right: 0%; /* Ajusta el margen derecho a 0% para pantallas grandes */
+  }
+}
+
 
 
 

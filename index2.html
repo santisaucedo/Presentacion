@@ -6,171 +6,555 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Santiago Saucedo - Desarrollador Full Stack Java</title>
     
+    <!-- Bootstrap 5 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     
+    <!-- Estilos personalizados -->
     <link id="theme-style" rel="stylesheet" href="css/styles2.css">
     
+    <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900&display=swap" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     
+    <!-- Meta tags SEO -->
     <meta name="description" content="Desarrollador Full Stack Java con 10+ años en soluciones tecnológicas. Especializado en Java Spring Boot, APIs REST y desarrollo web.">
     <meta name="keywords" content="Desarrollador Java, Spring Boot, Full Stack, APIs REST, Desarrollo Web, Remoto">
     <meta name="author" content="Santiago Saucedo">
 </head>
 
 <body class="bg-dark text-light">
+    <div class="izq"></div>
+    <div class="der"></div>
+    <div class="aba"></div>
+    <div class="arri"></div>
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-black sticky-top">
-<div class="container-fluid">
-<a class="navbar-brand fw-bold" href="#">
-<i class="fab fa-java me-2 text-primary"></i>Santiago Saucedo
-</a>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-black sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand fw-bold" href="#">
+                <i class="fab fa-java me-2 text-primary"></i>Santiago Saucedo
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="#acerca-de">Sobre Mí</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#experiencia">Experiencia</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#proyectos">Proyectos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#educacion">Educación</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#intereses">Intereses</a></li>
+                </ul>
+            </div>
+            
+            <div class="d-none d-lg-flex align-items-center ms-3">
+                <div class="btn-group" role="group">
+                    <button id="toggle-style" class="btn btn-outline-light btn-sm">
+                        <i class="fas fa-palette me-1"></i>Cambiar Estilo
+                    </button>
+                    <a href="doc/CV.pdf" class="btn btn-primary btn-sm" download>
+                        <i class="fas fa-download me-1"></i>CV
+                    </a>
+                </div>
+                <div class="arrow ms-3">
+                    <div class="triangle"></div>
+                    <div class="triangle"></div>
+                    <div class="triangle"></div>
+                </div>
+            </div>
+        </div>
+    </nav>
 
-<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-<span class="navbar-toggler-icon"></span>
-</button>
+    <!-- Contact Bar -->
+    <div class="bg-dark border-bottom border-secondary py-2">
+        <div class="container-fluid d-flex justify-content-between align-items-center">
+            <div class="d-flex align-items-center">
+                <i class="fas fa-map-marker-alt me-2 text-primary"></i>
+                <span class="me-4">Villa Pueyrredon, CABA</span>
+                <i class="fas fa-phone me-2 text-primary"></i>
+                <span class="me-4">(+54 9) 115-992-1253</span>
+            </div>
+            <div class="d-flex align-items-center">
+                <i class="fas fa-envelope me-2 text-primary"></i>
+                <a href="mailto:santiagonsaucedo@gmail.com" id="email" class="text-light me-3">santiagonsaucedo@gmail.com</a>
+                <button id="copy-btn" class="btn btn-sm btn-outline-light" onclick="copyEmail()" title="Copiar email">
+                    <i class="fas fa-copy"></i>
+                </button>
+            </div>
+        </div>
+    </div>
 
-<div class="collapse navbar-collapse" id="navbarNav">
-<ul class="navbar-nav ms-auto">
-<li class="nav-item"><a class="nav-link active" href="#acerca-de">Sobre Mí</a></li>
-<li class="nav-item"><a class="nav-link" href="#experiencia">Experiencia</a></li>
-<li class="nav-item"><a class="nav-link" href="#proyectos">Proyectos</a></li>
-<li class="nav-item"><a class="nav-link" href="#educacion">Educación</a></li>
-<li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
-<li class="nav-item"><a class="nav-link" href="#intereses">Intereses</a></li>
-</ul>
-</div>
-</div>
-</nav>
+    <!-- About Section -->
+    <section id="acerca-de" class="section py-5 bg-dark">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-4 text-center mb-4 mb-md-0">
+                    <div class="foto-container mx-auto">
+                        <img src="assets/img/profile.jpg" alt="Santiago Saucedo - Desarrollador Full Stack" class="foto img-fluid rounded-circle border border-primary shadow-lg">
+                    </div>
+                    <div class="mt-4">
+                        <a href="doc/CV.pdf" class="btn btn-primary btn-lg" download>
+                            <i class="fas fa-arrow-down me-2"></i>Descargar CV Completo
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <h1 class="display-4 mb-3 text-light">Santiago <span class="text-primary">Saucedo</span></h1>
+                    <h2 class="h4 text-primary mb-4">Desarrollador Full Stack Java | Spring Boot | APIs REST</h2>
+                    
+                    <div class="card bg-dark border-secondary shadow mb-4">
+                        <div class="card-body">
+                            <h3 class="h5 card-title mb-3 text-light"><i class="fas fa-user-circle me-2 text-primary"></i>Sobre Mí</h3>
+                            <p class="card-text text-light">
+                                Desarrollador Full Stack con <strong class="text-primary">10+ años de experiencia en soluciones tecnológicas</strong>. 
+                                Especializado en <strong class="text-primary">Java Spring Boot para backend</strong> y <strong class="text-primary">APIs REST</strong>, 
+                                combinado con habilidades en <strong class="text-primary">JavaScript, HTML5 y Bootstrap</strong> para frontend.
+                            </p>
+                            <p class="card-text text-light">
+                                Mi trayectoria en <strong class="text-primary">Ryder Informática</strong> me ha dotado de una sólida capacidad para 
+                                resolver problemas complejos, implementar sistemas eficientes y adaptarme rápidamente a nuevas tecnologías.
+                            </p>
+                            <p class="card-text text-light mb-0">
+                                <strong class="text-primary">Busco oportunidades remotas/híbridas como Desarrollador Java</strong>, donde pueda aportar 
+                                mi experiencia técnica y seguir creciendo profesionalmente en un entorno colaborativo.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="social-icons d-flex justify-content-center justify-content-md-start gap-3">
+                        <a class="social-icon btn btn-outline-primary" href="https://www.linkedin.com/in/santiagonsaucedo/" target="_blank" title="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a class="social-icon btn btn-outline-light" href="https://github.com/santisaucedo" target="_blank" title="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a class="social-icon btn btn-outline-success" href="https://santisaucedo.github.io/Presentacion/" target="_blank" title="Portfolio">
+                            <i class="fas fa-globe"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<!-- PROYECTOS -->
+    <!-- Experience Section -->
+    <section id="experiencia" class="section py-5 bg-black">
+        <div class="container">
+            <h2 class="text-center mb-5 text-light"><i class="fas fa-briefcase me-2 text-primary"></i>Experiencia Profesional</h2>
+            
+            <div class="card bg-dark border-secondary shadow mb-4">
+                <div class="card-header bg-primary text-white">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div>
+                            <h3 class="h5 mb-0">Técnico Informático Senior</h3>
+                            <p class="mb-0 small">Ryder Informática y Comunicaciones</p>
+                        </div>
+                        <span class="badge bg-light text-dark">Junio 2013 - Presente</span>
+                    </div>
+                </div>
+                <div class="card-body bg-dark">
+                    <ul class="list-group list-group-flush bg-dark">
+                        <li class="list-group-item bg-dark text-light border-secondary">
+                            <i class="fas fa-check-circle text-success me-2"></i>
+                            Implementé soluciones tecnológicas para más de 50 clientes corporativos
+                        </li>
+                        <li class="list-group-item bg-dark text-light border-secondary">
+                            <i class="fas fa-check-circle text-success me-2"></i>
+                            Configuré sistemas críticos para estaciones de tráfico aéreo (ARINC)
+                        </li>
+                        <li class="list-group-item bg-dark text-light border-secondary">
+                            <i class="fas fa-check-circle text-success me-2"></i>
+                            Automatización de procesos reduciendo tiempos de implementación en 40%
+                        </li>
+                        <li class="list-group-item bg-dark text-light border-secondary">
+                            <i class="fas fa-check-circle text-success me-2"></i>
+                            Soporte técnico especializado en infraestructura IT y software empresarial
+                        </li>
+                        <li class="list-group-item bg-dark text-light border-secondary">
+                            <i class="fas fa-check-circle text-success me-2"></i>
+                            Instalación y configuración de software contable (Bejerman, SIAP, Holistor)
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<section id="proyectos" class="section py-5 bg-dark">
-<div class="container">
-<h2 class="text-center mb-5 text-light"><i class="fas fa-code me-2 text-primary"></i>Proyectos Técnicos</h2>
+    <!-- Projects Section -->
+    <section id="proyectos" class="section py-5 bg-dark">
+        <div class="container">
+            <h2 class="text-center mb-5 text-light"><i class="fas fa-code me-2 text-primary"></i>Proyectos Técnicos</h2>
+            
+            <div class="row g-4">
+                <!-- Proyecto 1 -->
+                <div class="col-md-6">
+                    <div class="card h-100 bg-dark border-secondary shadow">
+                        <div class="card-header bg-primary text-white">
+                            <h3 class="h5 mb-0">🔧 Sistema de Gestión de Reparaciones</h3>
+                        </div>
+                        <div class="card-body bg-dark">
+                            <div class="mb-3">
+                                <span class="badge bg-primary me-1">Java</span>
+                                <span class="badge bg-primary me-1">Spring Boot</span>
+                                <span class="badge bg-primary me-1">MySQL</span>
+                                <span class="badge bg-primary">Bootstrap</span>
+                            </div>
+                            <ul class="mb-3 text-light">
+                                <li>Aplicación web completa CRUD para gestión de órdenes de trabajo</li>
+                                <li>API REST con Spring MVC y Spring Data JPA</li>
+                                <li>Autenticación JWT y generación de reportes PDF</li>
+                                <li>Frontend responsivo con Bootstrap 5</li>
+                            </ul>
+                            <a href="https://github.com/santisaucedo/Gestion_reparaciones" target="_blank" class="btn btn-outline-primary btn-sm">
+                                <i class="fab fa-github me-1"></i>Ver código
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Proyecto 2 -->
+                <div class="col-md-6">
+                    <div class="card h-100 bg-dark border-secondary shadow">
+                        <div class="card-header bg-info text-white">
+                            <h3 class="h5 mb-0">🌤️ API del Clima</h3>
+                        </div>
+                        <div class="card-body bg-dark">
+                            <div class="mb-3">
+                                <span class="badge bg-primary me-1">JavaScript</span>
+                                <span class="badge bg-primary me-1">OpenWeather API</span>
+                                <span class="badge bg-primary me-1">Bootstrap</span>
+                                <span class="badge bg-primary">Geolocation</span>
+                            </div>
+                            <ul class="mb-3 text-light">
+                                <li>Aplicación web que consume API externa para mostrar condiciones climáticas</li>
+                                <li>Implementación de geolocalización y síntesis de voz</li>
+                                <li>Interfaz responsive con modo claro/oscuro</li>
+                                <li>Web Speech API para descripciones por voz</li>
+                            </ul>
+                            <div class="btn-group">
+                                <a href="https://santisaucedo.github.io/apiclima" target="_blank" class="btn btn-outline-info btn-sm">
+                                    <i class="fas fa-external-link-alt me-1"></i>Demo en vivo
+                                </a>
+                                <a href="https://github.com/santisaucedo/api-clima" target="_blank" class="btn btn-outline-light btn-sm">
+                                    <i class="fab fa-github me-1"></i>Código
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Proyecto 3 -->
+                <div class="col-md-6">
+                    <div class="card h-100 bg-dark border-warning shadow">
+                        <div class="card-header bg-warning text-dark">
+                            <h3 class="h5 mb-0">🎬 Plataforma estilo Netflix</h3>
+                        </div>
+                        <div class="card-body bg-dark">
+                            <div class="mb-3">
+                                <span class="badge bg-primary me-1">PHP</span>
+                                <span class="badge bg-primary me-1">Laravel</span>
+                                <span class="badge bg-primary">MySQL</span>
+                            </div>
+                            <ul class="mb-3 text-light">
+                                <li>Sistema de gestión de contenido multimedia</li>
+                                <li>Autenticación de usuarios y roles</li>
+                                <li>Panel administrativo para CRUD de películas/series</li>
+                                <li>Diseño de interfaz inspirada en plataformas streaming</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Proyecto 4 -->
+                <div class="col-md-6">
+                    <div class="card h-100 bg-dark border-secondary shadow">
+                        <div class="card-header bg-secondary text-white">
+                            <h3 class="h5 mb-0">📍 Normalización de Direcciones</h3>
+                        </div>
+                        <div class="card-body bg-dark">
+                            <div class="mb-3">
+                                <span class="badge bg-primary me-1">JavaScript</span>
+                                <span class="badge bg-primary me-1">APIs REST</span>
+                                <span class="badge bg-primary">Bootstrap</span>
+                            </div>
+                            <ul class="mb-3 text-light">
+                                <li>Sistema para normalizar direcciones en diversas plataformas</li>
+                                <li>Integración con APIs de geolocalización</li>
+                                <li>Mejora de experiencia del usuario final</li>
+                                <li>Validación y formato automático de direcciones</li>
+                            </ul>
+                            <a href="https://santisaucedo.github.io/apigps/" target="_blank" class="btn btn-outline-secondary btn-sm">
+                                <i class="fas fa-external-link-alt me-1"></i>Ver proyecto
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<div class="row g-4">
+    <!-- Education Section -->
+    <section id="educacion" class="section py-5 bg-black">
+        <div class="container">
+            <h2 class="text-center mb-5 text-light"><i class="fas fa-graduation-cap me-2 text-primary"></i>Educación</h2>
+            
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="card h-100 bg-dark border-secondary shadow">
+                        <div class="card-header bg-primary text-white">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <h3 class="h5 mb-0">CFP SMATA</h3>
+                                <span class="badge bg-light text-dark">2023-2024</span>
+                            </div>
+                        </div>
+                        <div class="card-body bg-dark">
+                            <h4 class="h6 card-subtitle mb-3 text-light">Desarrollo Full Stack Java</h4>
+                            <div class="mb-3">
+                                <strong class="d-block mb-1 text-light">Especialización:</strong>
+                                <span class="badge bg-secondary me-1">Java</span>
+                                <span class="badge bg-secondary me-1">Spring Boot</span>
+                                <span class="badge bg-secondary me-1">APIs REST</span>
+                            </div>
+                            <ul class="mb-0 text-light">
+                                <li><strong>Backend:</strong> Java, Spring Boot, Spring MVC, Spring Data JPA</li>
+                                <li><strong>Frontend:</strong> JavaScript, HTML5, CSS3, Bootstrap</li>
+                                <li><strong>Base de datos:</strong> MySQL, MariaDB</li>
+                                <li><strong>Herramientas:</strong> Git, Maven, IntelliJ IDEA</li>
+                                <li><strong>Metodologías:</strong> Agile, Scrum, Desarrollo en equipo</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6">
+                    <div class="card h-100 bg-dark border-secondary shadow">
+                        <div class="card-header bg-success text-white">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <h3 class="h5 mb-0">Alura LATAM</h3>
+                                <span class="badge bg-light text-dark">2022</span>
+                            </div>
+                        </div>
+                        <div class="card-body bg-dark">
+                            <h4 class="h6 card-subtitle mb-3 text-light">Desarrollo Frontend</h4>
+                            <div class="mb-3">
+                                <strong class="d-block mb-1 text-light">Tecnologías:</strong>
+                                <span class="badge bg-secondary me-1">JavaScript</span>
+                                <span class="badge bg-secondary me-1">HTML5</span>
+                                <span class="badge bg-secondary me-1">CSS3</span>
+                                <span class="badge bg-secondary">Bootstrap</span>
+                            </div>
+                            <ul class="mb-0 text-light">
+                                <li><strong>Frontend:</strong> JavaScript ES6+, HTML5, CSS3, Bootstrap</li>
+                                <li><strong>Herramientas:</strong> Git, GitHub, Visual Studio Code</li>
+                                <li><strong>Conceptos:</strong> Responsive Design, DOM Manipulation, APIs REST</li>
+                                <li><strong>Desarrollo:</strong> Aplicaciones web interactivas y responsivas</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<!-- NUEVO PROYECTO TALLER -->
+    <!-- Skills Section -->
+    <section id="skills" class="section py-5 bg-dark">
+        <div class="container">
+            <h2 class="text-center mb-5 text-light"><i class="fas fa-cogs me-2 text-primary"></i>Habilidades Técnicas</h2>
+            
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <div class="card h-100 bg-dark border-secondary shadow">
+                        <div class="card-header bg-primary text-white">
+                            <h3 class="h5 mb-0">Lenguajes y Herramientas</h3>
+                        </div>
+                        <div class="card-body bg-dark">
+                            <div class="text-center">
+                                <ul class="list-inline dev-icons fs-1 mb-4">
+                                    <li class="list-inline-item me-4" title="Java"><i class="fab fa-java text-danger"></i></li>
+                                    <li class="list-inline-item me-4" title="Spring Boot"><i class="fas fa-leaf text-success"></i></li>
+                                    <li class="list-inline-item me-4" title="JavaScript"><i class="fab fa-js-square text-warning"></i></li>
+                                    <li class="list-inline-item me-4" title="HTML5"><i class="fab fa-html5 text-orange"></i></li>
+                                    <li class="list-inline-item me-4" title="CSS3"><i class="fab fa-css3-alt text-info"></i></li>
+                                    <li class="list-inline-item me-4" title="Bootstrap"><i class="fab fa-bootstrap text-purple"></i></li>
+                                    <li class="list-inline-item me-4" title="Git"><i class="fab fa-git-alt text-light"></i></li>
+                                    <li class="list-inline-item" title="GitHub"><i class="fab fa-github text-light"></i></li>
+                                </ul>
+                            </div>
+                            
+                            <div class="row">
+                                <div class="col-6">
+                                    <h4 class="h6 text-primary">Backend</h4>
+                                    <ul class="list-unstyled small text-light">
+                                        <li><i class="fas fa-check text-success me-1"></i> Java</li>
+                                        <li><i class="fas fa-check text-success me-1"></i> Spring Boot</li>
+                                        <li><i class="fas fa-check text-success me-1"></i> Spring MVC</li>
+                                        <li><i class="fas fa-check text-success me-1"></i> APIs REST</li>
+                                        <li><i class="fas fa-check text-success me-1"></i> PHP/Laravel</li>
+                                    </ul>
+                                </div>
+                                <div class="col-6">
+                                    <h4 class="h6 text-primary">Frontend</h4>
+                                    <ul class="list-unstyled small text-light">
+                                        <li><i class="fas fa-check text-success me-1"></i> JavaScript</li>
+                                        <li><i class="fas fa-check text-success me-1"></i> HTML5</li>
+                                        <li><i class="fas fa-check text-success me-1"></i> CSS3</li>
+                                        <li><i class="fas fa-check text-success me-1"></i> Bootstrap</li>
+                                        <li><i class="fas fa-check text-success me-1"></i> Responsive Design</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 mb-4">
+                    <div class="card h-100 bg-dark border-secondary shadow">
+                        <div class="card-header bg-primary text-white">
+                            <h3 class="h5 mb-0">Flujo de Trabajo</h3>
+                        </div>
+                        <div class="card-body bg-dark">
+                            <ul class="fa-ul mb-0 text-light">
+                                <li class="mb-2">
+                                    <span class="fa-li"><i class="fas fa-check text-success"></i></span>
+                                    <strong>Desarrollo Ágil:</strong> Scrum, Kanban, metodologías iterativas
+                                </li>
+                                <li class="mb-2">
+                                    <span class="fa-li"><i class="fas fa-check text-success"></i></span>
+                                    <strong>Diseño Responsive:</strong> Mobile-First, adaptación a múltiples dispositivos
+                                </li>
+                                <li class="mb-2">
+                                    <span class="fa-li"><i class="fas fa-check text-success"></i></span>
+                                    <strong>Control de Versiones:</strong> Git, GitHub, GitFlow, Pull Requests
+                                </li>
+                                <li class="mb-2">
+                                    <span class="fa-li"><i class="fas fa-check text-success"></i></span>
+                                    <strong>Trabajo en Equipo:</strong> Colaboración efectiva, comunicación clara
+                                </li>
+                                <li class="mb-2">
+                                    <span class="fa-li"><i class="fas fa-check text-success"></i></span>
+                                    <strong>Testing & Debugging:</strong> Pruebas en múltiples navegadores y dispositivos
+                                </li>
+                                <li class="mb-0">
+                                    <span class="fa-li"><i class="fas fa-check text-success"></i></span>
+                                    <strong>Documentación:</strong> Técnica, de usuario y de procesos
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<div class="col-md-6">
-<div class="card h-100 bg-dark border-success shadow">
+    <!-- Interests Section -->
+    <section id="intereses" class="section py-5 bg-black">
+        <div class="container">
+            <h2 class="text-center mb-5 text-light"><i class="fas fa-heart me-2 text-primary"></i>Intereses</h2>
+            
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div class="card bg-dark border-secondary shadow">
+                        <div class="card-body text-center">
+                            <div class="row align-items-center">
+                                <div class="col-md-4 mb-3 mb-md-0">
+                                    <div class="display-1 text-primary">
+                                        <i class="fas fa-futbol"></i>
+                                    </div>
+                                    <h4 class="h5 mt-2 text-light">Deporte & Actividad</h4>
+                                </div>
+                                <div class="col-md-8">
+                                    <p class="lead text-light">
+                                        Fuera del desarrollo, practico <strong class="text-primary">fútbol semanalmente</strong> y <strong class="text-primary">acrobacia</strong>
+                                        disciplinas que aplico como metáfora del desarrollo profesional: <em class="text-light">consistencia, 
+                                        disciplina y mejora continua</em>.
+                                    </p>
+                                    <p class="mb-0 text-light">
+                                        Creo firmemente en el <strong class="text-primary">balance vida-trabajo</strong> y busco roles que valoren 
+                                        tanto la productividad como el bienestar personal y el crecimiento constante.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="text-center mt-4">
+                        <div class="btn-group" role="group">
+                            <a href="mailto:santiagonsaucedo@gmail.com" class="btn btn-primary">
+                                <i class="fas fa-envelope me-2"></i>Contactar
+                            </a>
+                            <a href="doc/CV.pdf" class="btn btn-outline-primary" download>
+                                <i class="fas fa-download me-2"></i>Descargar CV
+                            </a>
+                            <a href="https://www.linkedin.com/in/santiagonsaucedo/" target="_blank" class="btn btn-outline-light">
+                                <i class="fab fa-linkedin me-2"></i>LinkedIn
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<div class="card-header bg-success text-white">
-<h3 class="h5 mb-0">🚗 Sistema de Gestión de Taller</h3>
-</div>
+    <div class="energy-line"></div>
 
-<div class="card-body bg-dark">
+    <!-- BOTÓN CAMBIAR ESTILO ABAJO -->
+    <div class="text-center my-4">
+        <a href="index.html" style="color:#38bdf8; text-decoration:none; font-weight:500;">
+            ⬅️➡️ Cambiar estilo
+        </a>
+    </div>
 
-<div class="mb-3">
-<span class="badge bg-primary me-1">Java</span>
-<span class="badge bg-primary me-1">Spring Boot</span>
-<span class="badge bg-primary me-1">MySQL</span>
-<span class="badge bg-primary">Bootstrap</span>
-</div>
+    <!-- Footer -->
+    <footer class="bg-black text-light py-4 border-top border-secondary">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="mb-0">
+                        &copy; 2024 Santiago Saucedo. Desarrollador Full Stack Java.
+                    </p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <a href="mailto:santiagonsaucedo@gmail.com" class="text-light me-3">
+                        <i class="fas fa-envelope me-1"></i>santiagonsaucedo@gmail.com
+                    </a>
+                    <span class="d-none d-md-inline">|</span>
+                    <a href="tel:+5491159921253" class="text-light ms-3">
+                        <i class="fas fa-phone me-1"></i>+54 9 115-992-1253
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
 
-<ul class="mb-3 text-light">
-<li>Aplicación web para administración completa de talleres mecánicos</li>
-<li>Registro y gestión de clientes y vehículos</li>
-<li>Creación de presupuestos de reparación</li>
-<li>Búsqueda rápida por patente</li>
-<li>Filtro de trabajos por fecha e historial</li>
-</ul>
-
-<a href="https://studio--studio-3844595294-cb57b.us-central1.hosted.app/login"
-target="_blank"
-class="btn btn-outline-success btn-sm">
-
-<i class="fas fa-external-link-alt me-1"></i>Demo en vivo
-</a>
-
-</div>
-</div>
-</div>
-
-<!-- Proyecto Reparaciones -->
-
-<div class="col-md-6">
-<div class="card h-100 bg-dark border-secondary shadow">
-
-<div class="card-header bg-primary text-white">
-<h3 class="h5 mb-0">🔧 Sistema de Gestión de Reparaciones</h3>
-</div>
-
-<div class="card-body bg-dark">
-
-<div class="mb-3">
-<span class="badge bg-primary me-1">Java</span>
-<span class="badge bg-primary me-1">Spring Boot</span>
-<span class="badge bg-primary me-1">MySQL</span>
-<span class="badge bg-primary">Bootstrap</span>
-</div>
-
-<ul class="mb-3 text-light">
-<li>Aplicación web CRUD para gestión de órdenes de trabajo</li>
-<li>API REST con Spring MVC y Spring Data JPA</li>
-<li>Autenticación JWT</li>
-<li>Generación de reportes PDF</li>
-</ul>
-
-<a href="https://github.com/santisaucedo/Gestion_reparaciones"
-target="_blank"
-class="btn btn-outline-primary btn-sm">
-
-<i class="fab fa-github me-1"></i>Ver código
-</a>
-
-</div>
-</div>
-</div>
-
-<!-- Proyecto API Clima -->
-
-<div class="col-md-6">
-<div class="card h-100 bg-dark border-info shadow">
-
-<div class="card-header bg-info text-white">
-<h3 class="h5 mb-0">🌤️ API del Clima</h3>
-</div>
-
-<div class="card-body bg-dark">
-
-<ul class="mb-3 text-light">
-<li>Aplicación que consume OpenWeather API</li>
-<li>Geolocalización automática</li>
-<li>Síntesis de voz</li>
-</ul>
-
-<a href="https://santisaucedo.github.io/apiclima"
-target="_blank"
-class="btn btn-outline-info btn-sm">
-
-<i class="fas fa-external-link-alt me-1"></i>Demo
-</a>
-
-</div>
-</div>
-</div>
-
-</div>
-</div>
-</section>
-
-<!-- BOTON CAMBIAR ESTILO ABAJO -->
-<div class="text-center my-4">
-<a href="index.html" style="color:#38bdf8; text-decoration:none; font-weight:500;">
-⬅️➡️ Cambiar estilo
-</a>
-</div>
-
-<footer class="bg-black text-light py-4 border-top border-secondary">
-<div class="container text-center">
-<p class="mb-0">© 2024 Santiago Saucedo</p>
-</div>
-</footer>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/changecolor.js"></script>
+    
+    <script>
+    function copyEmail() {
+        const email = 'santiagonsaucedo@gmail.com';
+        navigator.clipboard.writeText(email).then(() => {
+            const copyBtn = document.getElementById('copy-btn');
+            const originalHTML = copyBtn.innerHTML;
+            copyBtn.innerHTML = '<i class="fas fa-check"></i>';
+            copyBtn.classList.add('btn-success');
+            copyBtn.classList.remove('btn-outline-light');
+            
+            setTimeout(() => {
+                copyBtn.innerHTML = originalHTML;
+                copyBtn.classList.remove('btn-success');
+                copyBtn.classList.add('btn-outline-light');
+            }, 2000);
+        });
+    }
+    </script>
 </body>
+
 </html>

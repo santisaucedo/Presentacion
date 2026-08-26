@@ -19,7 +19,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     
     <!-- Meta tags SEO -->
-    <meta name="description" content="Desarrollador Full Stack Java con 10+ años en soluciones tecnológicas. Especializado en Java Spring Boot, APIs REST y desarrollo web.">
+    <meta name="description" content="Desarrollador Full Stack Java. Creador de RepaLab (repalab.com.ar). Especializado en Java Spring Boot, APIs REST y desarrollo web.">
     <meta name="keywords" content="Desarrollador Java, Spring Boot, Full Stack, APIs REST, Desarrollo Web, Remoto">
     <meta name="author" content="Santiago Saucedo">
 </head>
@@ -59,7 +59,10 @@
                         <i class="fas fa-palette me-1"></i>Cambiar Estilo
                     </button>
                     <a href="doc/CV.pdf" class="btn btn-primary btn-sm" download>
-                        <i class="fas fa-download me-1"></i>CV
+                        <i class="fas fa-download me-1"></i>CV ES
+                    </a>
+                    <a href="doc/CV_EN.pdf" class="btn btn-outline-light btn-sm" download>
+                        CV EN
                     </a>
                 </div>
                 <div class="arrow ms-3">
@@ -100,7 +103,10 @@
                     </div>
                     <div class="mt-4">
                         <a href="doc/CV.pdf" class="btn btn-primary btn-lg" download>
-                            <i class="fas fa-arrow-down me-2"></i>Descargar CV Completo
+                            <i class="fas fa-arrow-down me-2"></i>Descargar CV (ES)
+                        </a>
+                        <a href="doc/CV_EN.pdf" class="btn btn-outline-light mt-2" download>
+                            Download CV (EN)
                         </a>
                     </div>
                 </div>
@@ -112,9 +118,13 @@
                         <div class="card-body">
                             <h3 class="h5 card-title mb-3 text-light"><i class="fas fa-user-circle me-2 text-primary"></i>Sobre Mí</h3>
                             <p class="card-text text-light">
-                                Desarrollador Full Stack con <strong class="text-primary">10+ años de experiencia en soluciones tecnológicas</strong>. 
+                                Desarrollador Full Stack con <strong class="text-primary">10+ años en IT</strong> y desarrollo de software desde 2023. 
                                 Especializado en <strong class="text-primary">Java Spring Boot para backend</strong> y <strong class="text-primary">APIs REST</strong>, 
                                 combinado con habilidades en <strong class="text-primary">JavaScript, HTML5 y Bootstrap</strong> para frontend.
+                            </p>
+                            <p class="card-text text-light">
+                                Creador de <strong class="text-primary">RepaLab</strong> (<a href="https://www.repalab.com.ar" target="_blank" class="text-primary">www.repalab.com.ar</a>),
+                                aplicación en producción para gestión de reparaciones, stock y proveedores.
                             </p>
                             <p class="card-text text-light">
                                 Mi trayectoria en <strong class="text-primary">Ryder Informática</strong> me ha dotado de una sólida capacidad para 
@@ -134,6 +144,9 @@
                         <a class="social-icon btn btn-outline-light" href="https://github.com/santisaucedo" target="_blank" title="GitHub">
                             <i class="fab fa-github"></i>
                         </a>
+                        <a class="social-icon btn btn-outline-warning" href="https://www.repalab.com.ar" target="_blank" title="RepaLab">
+                            <i class="fas fa-wrench"></i>
+                        </a>
                         <a class="social-icon btn btn-outline-success" href="https://santisaucedo.github.io/Presentacion/" target="_blank" title="Portfolio">
                             <i class="fas fa-globe"></i>
                         </a>
@@ -147,6 +160,38 @@
     <section id="experiencia" class="section py-5 bg-black">
         <div class="container">
             <h2 class="text-center mb-5 text-light"><i class="fas fa-briefcase me-2 text-primary"></i>Experiencia Profesional</h2>
+
+            <div class="card bg-dark border-primary shadow mb-4">
+                <div class="card-header bg-primary text-white">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div>
+                            <h3 class="h5 mb-0">Desarrollador y producto propio</h3>
+                            <p class="mb-0 small">RepaLab · repalab.com.ar</p>
+                        </div>
+                        <span class="badge bg-light text-dark">2025 - Presente</span>
+                    </div>
+                </div>
+                <div class="card-body bg-dark">
+                    <ul class="list-group list-group-flush bg-dark">
+                        <li class="list-group-item bg-dark text-light border-secondary">
+                            <i class="fas fa-check-circle text-success me-2"></i>
+                            SaaS/PWA en producción: órdenes, clientes, stock, proveedores y agenda
+                        </li>
+                        <li class="list-group-item bg-dark text-light border-secondary">
+                            <i class="fas fa-check-circle text-success me-2"></i>
+                            Java, Spring Boot, MySQL · Docker Compose, Caddy y VPS (DigitalOcean)
+                        </li>
+                        <li class="list-group-item bg-dark text-light border-secondary">
+                            <i class="fas fa-check-circle text-success me-2"></i>
+                            Pagos con Mercado Pago; prototipo inicial en Firebase y migración a contenedores
+                        </li>
+                        <li class="list-group-item bg-dark text-light border-secondary">
+                            <i class="fas fa-check-circle text-success me-2"></i>
+                            Desarrollo con Cursor e IA, Git y despliegue continuo del producto
+                        </li>
+                    </ul>
+                </div>
+            </div>
             
             <div class="card bg-dark border-secondary shadow mb-4">
                 <div class="card-header bg-primary text-white">
@@ -195,30 +240,32 @@
         
         <div class="row g-4">
 
-            <!-- Proyecto 1 - Taller Automotor -->
+            <!-- Proyecto 1 - RepaLab -->
             <div class="col-md-6">
                 <div class="card h-100 bg-dark border-primary shadow">
                     <div class="card-header bg-primary text-white">
-                        <h3 class="h5 mb-0">🚗 Sistema de Gestión de Taller Automotor</h3>
+                        <h3 class="h5 mb-0">RepaLab — Gestión de reparaciones</h3>
                     </div>
                     <div class="card-body bg-dark">
                         <div class="mb-3">
-                            <span class="badge bg-primary me-1">HTML</span>
-                            <span class="badge bg-primary me-1">CSS</span>
-                            <span class="badge bg-primary me-1">JavaScript</span>
+                            <span class="badge bg-primary me-1">Java</span>
+                            <span class="badge bg-primary me-1">Spring Boot</span>
+                            <span class="badge bg-primary me-1">MySQL</span>
                             <span class="badge bg-primary me-1">Bootstrap</span>
-                            <span class="badge bg-primary">Firebase</span>
+                            <span class="badge bg-success">En producción</span>
                         </div>
                         <ul class="mb-3 text-light">
-                            <li>Aplicación web para administrar operaciones de un taller mecánico</li>
-                            <li>Gestión de clientes y vehículos asociados</li>
-                            <li>Creación de presupuestos con detalle de trabajos y costos</li>
-                            <li>Búsqueda rápida por patente del vehículo</li>
-                            <li>Consultas y filtrado de registros por fecha</li>
-                            <li>Interfaz simple orientada a optimizar la gestión del taller</li>
+                            <li>App en producción para talleres y servicio técnico</li>
+                            <li>Órdenes de trabajo, clientes, stock y proveedores</li>
+                            <li>Costos en USD con tipo de cambio BNA e IVA en ARS</li>
+                            <li>Agenda, pendientes, importación de clientes y PWA instalable</li>
+                            <li>Landing: www.repalab.com.ar · App: app.repalab.com.ar</li>
                         </ul>
-                        <a href="https://studio--studio-3844595294-cb57b.us-central1.hosted.app/login" target="_blank" class="btn btn-outline-primary btn-sm">
-                            <i class="fas fa-external-link-alt me-1"></i>Ver aplicación en vivo
+                        <a href="https://www.repalab.com.ar" target="_blank" class="btn btn-outline-primary btn-sm me-2">
+                            <i class="fas fa-external-link-alt me-1"></i>Ver landing
+                        </a>
+                        <a href="https://app.repalab.com.ar" target="_blank" class="btn btn-primary btn-sm">
+                            <i class="fas fa-play me-1"></i>Probar la app
                         </a>
                     </div>
                 </div>
@@ -228,7 +275,7 @@
             <div class="col-md-6">
                 <div class="card h-100 bg-dark border-success shadow">
                     <div class="card-header bg-success text-white">
-                        <h3 class="h5 mb-0">🛠️ Sistema de Gestión de Reparaciones</h3>
+                        <h3 class="h5 mb-0">RepaLab — Backend Java / Spring Boot</h3>
                     </div>
                     <div class="card-body bg-dark">
                         <div class="mb-3">
@@ -393,6 +440,7 @@
                                     <li class="list-inline-item me-4" title="CSS3"><i class="fab fa-css3-alt text-info"></i></li>
                                     <li class="list-inline-item me-4" title="Bootstrap"><i class="fab fa-bootstrap text-purple"></i></li>
                                     <li class="list-inline-item me-4" title="Git"><i class="fab fa-git-alt text-light"></i></li>
+                                    <li class="list-inline-item me-4" title="Docker"><i class="fab fa-docker text-info"></i></li>
                                     <li class="list-inline-item" title="GitHub"><i class="fab fa-github text-light"></i></li>
                                 </ul>
                             </div>
@@ -405,16 +453,16 @@
                                         <li><i class="fas fa-check text-success me-1"></i> Spring Boot</li>
                                         <li><i class="fas fa-check text-success me-1"></i> Spring MVC</li>
                                         <li><i class="fas fa-check text-success me-1"></i> APIs REST</li>
-                                        <li><i class="fas fa-check text-success me-1"></i> PHP/Laravel</li>
+                                        <li><i class="fas fa-check text-success me-1"></i> PHP</li>
                                     </ul>
                                 </div>
                                 <div class="col-6">
                                     <h4 class="h6 text-primary">Frontend</h4>
                                     <ul class="list-unstyled small text-light">
                                         <li><i class="fas fa-check text-success me-1"></i> JavaScript</li>
-                                        <li><i class="fas fa-check text-success me-1"></i> HTML5</li>
-                                        <li><i class="fas fa-check text-success me-1"></i> CSS3</li>
+                                        <li><i class="fas fa-check text-success me-1"></i> HTML5 / CSS3</li>
                                         <li><i class="fas fa-check text-success me-1"></i> Bootstrap</li>
+                                        <li><i class="fas fa-check text-success me-1"></i> PWA</li>
                                         <li><i class="fas fa-check text-success me-1"></i> Responsive Design</li>
                                     </ul>
                                 </div>
@@ -432,11 +480,11 @@
                             <ul class="fa-ul mb-0 text-light">
                                 <li class="mb-2">
                                     <span class="fa-li"><i class="fas fa-check text-success"></i></span>
-                                    <strong>Desarrollo Ágil:</strong> Scrum, Kanban, metodologías iterativas
+                                    <strong>DevOps:</strong> Docker, Caddy, DigitalOcean, Firebase (prototipos)
                                 </li>
                                 <li class="mb-2">
                                     <span class="fa-li"><i class="fas fa-check text-success"></i></span>
-                                    <strong>Diseño Responsive:</strong> Mobile-First, adaptación a múltiples dispositivos
+                                    <strong>IA / Cursor:</strong> desarrollo asistido por agentes, revisión e iteración rápida
                                 </li>
                                 <li class="mb-2">
                                     <span class="fa-li"><i class="fas fa-check text-success"></i></span>
@@ -444,11 +492,11 @@
                                 </li>
                                 <li class="mb-2">
                                     <span class="fa-li"><i class="fas fa-check text-success"></i></span>
-                                    <strong>Trabajo en Equipo:</strong> Colaboración efectiva, comunicación clara
+                                    <strong>Diseño Responsive:</strong> Mobile-First, PWA, adaptación a múltiples dispositivos
                                 </li>
                                 <li class="mb-2">
                                     <span class="fa-li"><i class="fas fa-check text-success"></i></span>
-                                    <strong>Testing & Debugging:</strong> Pruebas en múltiples navegadores y dispositivos
+                                    <strong>Trabajo en Equipo:</strong> Colaboración efectiva, comunicación clara
                                 </li>
                                 <li class="mb-0">
                                     <span class="fa-li"><i class="fas fa-check text-success"></i></span>
@@ -499,7 +547,10 @@
                                 <i class="fas fa-envelope me-2"></i>Contactar
                             </a>
                             <a href="doc/CV.pdf" class="btn btn-outline-primary" download>
-                                <i class="fas fa-download me-2"></i>Descargar CV
+                                <i class="fas fa-download me-2"></i>CV ES
+                            </a>
+                            <a href="doc/CV_EN.pdf" class="btn btn-outline-light" download>
+                                CV EN
                             </a>
                             <a href="https://www.linkedin.com/in/santiagonsaucedo/" target="_blank" class="btn btn-outline-light">
                                 <i class="fab fa-linkedin me-2"></i>LinkedIn
